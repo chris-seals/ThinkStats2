@@ -21,7 +21,11 @@ def Mode(hist):
 
     returns: value from Hist
     """
-    return 0
+    mode = 0
+    for value, freq in hist:
+        if freq > mode:
+            mode = freq
+    return mode
 
 
 def AllModes(hist):
